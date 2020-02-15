@@ -1,0 +1,97 @@
+ 
+
+<div class="panel panel-default card-5">
+    <div class=""> 
+        <div class="panel-heading main-panel card-5" >
+         <div style="padding-left:10px;">
+            Manage Personal Data
+         </div>
+           
+         </div>
+
+         <div class="panel-heading custom-panel card-5">
+             <div class="">
+            <form class="example-form" #signIn = "ngForm">
+                
+                
+                <div style="border : 1px solid black"  *ngIf="user != null">
+
+               
+
+                <table style="width:50% " class="table table-bordered">
+                      <!--   {{user | json}}-->
+             
+                     <tr>
+                            <td class="text-danger" style="width:30%; font-weight: bold;">
+                                    Username : 
+                            </td>
+                            <td   style="width:70%">
+                                    {{ user.userName}}
+                            </td>
+
+                     </tr>
+
+                     <tr>
+                        <td class="text-danger" style="width:30%; font-weight: bold;">
+                                Usertype: 
+                        </td>
+                        <td   style="width:70%">
+                                {{ user.userType}}
+                        </td>
+
+                 </tr>
+                     <tr style="padding-top : 5px; padding-bootom: 5px;">
+                                <td class="text-danger" style="width:30%; font-weight: bold;">
+                                    Loginname : 
+                                </td>
+                                <td   style="width:70%">
+                                   <input class="form-control" name="loginName1"
+                                   [(ngModel)]="user.userName" >
+                                </td>
+                     </tr>
+                     <tr>
+                        <td class="text-danger" style="width:30%; font-weight: bold;">
+                            Email : 
+                        </td>
+                        <td   style="width:70%">
+                           <input class="form-control" name="email1"
+                           [(ngModel)]="user.email" >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-danger" style="width:30%; font-weight: bold;">
+                            Contact : 
+                        </td>
+                        <td   style="width:70%">
+                           <input class="form-control" name="number1"
+                           [(ngModel)]="user.contactNumber" >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-danger" style="width:30%; font-weight: bold;">
+                            Address : 
+                        </td>
+                        <td   style="width:70%">
+                           <input class="form-control" name="address"
+                           [(ngModel)]="user.address" >
+                        </td>
+                    </tr>
+                    <br/>
+                    <br/>
+
+                    <tr>
+                        <button class="btn btn-danger" style="margin-left:10px;" (click)="updateDetail(user)">Update Details </button>
+                    </tr>
+
+                
+                    </table>
+                </div>
+
+
+              </form>
+              <div>
+         </div>
+    </div>
+    
+   
+  </div>

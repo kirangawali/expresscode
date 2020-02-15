@@ -1,0 +1,10 @@
+.tdCss{
+    font-weight:  bold;
+    color: red;
+    border : 1px solid black;
+
+}
+
+.tdData{
+    word-break: break-word;
+}

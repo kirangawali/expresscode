@@ -1,0 +1,85 @@
+
+<div class="panel panel-default card-5">
+    <div class=""> 
+        <div class="panel-heading main-panel card-5" >
+         <div style="padding-left:10px;">
+            Admin Section
+         </div>
+           
+         </div>
+
+         <div class="panel-heading custom-panel card-5">
+             <div >
+             
+
+                <table style="width:100%;" class="table  table-stripped">
+                    <thead>
+                        <tr style="background-color: gainsboro">
+                                <td  style="width:10%" class="tdCss">
+                                        User Name
+                                </td>
+                                <td style="width:10%" class="tdCss">
+                                    Login Name
+            
+                                </td>
+                                <td  style="width:10%" class="tdCss">
+                                    Password
+                                </td>
+                                <td style="width:25%" class="tdCss">
+                                    Email
+            
+                                </td>
+                                <td style="width:15%" class="tdCss">
+                                    UserType
+                                </td>
+                                <td  style="width:10%" class="tdCss">
+                                    Mobile
+                                </td>
+                                <td  style="width:20%" class="tdCss">
+                                    Address
+                                </td>
+                        </tr>
+                    </thead>
+                </table>
+                </div>
+                <div class="" style="height:500px;overflow-y: auto; border: 1px solid black">
+                    <table style="width:100%;" class="table  table-stripped">
+                    <tbody>
+                        <tr *ngFor="let i of uDataList">
+                            <td  style="width:10%" class="tdData">
+                                   {{ i.userName}}
+                            </td>
+                            <td style="width:10%"  class="tdData">
+                                {{ i.loginName}}
+                            </td>
+                            <td  style="width:10%"  class="tdData">
+                                {{ i.password}}
+                            </td>
+                            <td style="width:25%"  class="tdData">
+                                {{ i.email}}
+            
+                            </td>
+                            <td style="width:15%"  class="tdData"> 
+                                {{ i.userType}}
+                            </td>
+                            <td  style="width:10%"  class="tdData">
+                                {{ i.contactNumber}}
+                            </td>
+                            <td  style="width:10%"  class="tdData">
+                                {{i.address}}
+                            </td>
+                            <td  style="width:10%">
+                                 <button class="btn btn-danger" (click)="deleteUser(i)">Delete</button>
+                            </td>
+                    </tr>
+            
+                    </tbody>
+            
+            
+                </table>
+              <div>
+         </div>
+    </div>
+    
+   
+  </div>

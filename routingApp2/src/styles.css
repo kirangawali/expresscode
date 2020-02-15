@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+
+ @import "~@angular/material/prebuilt-themes/deeppurple-amber.css"; 
+ /*@import "~@angular/material/prebuilt-themes/indigo-pink.css"; */
+.fa{
+    font-size: 15px !important;
+}
+
+fa fa-edit{
+    font-size: 15px !important;
+}
+
+nav-item active
+{
+    font-weight: bold;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.mat-form-field-invalid .mat-radio-label-content{
+    color:#f44336;
+}
+.mat-form-field-invalid .mat-radio-outer-circle{
+    border-color:#f44336!important;
+}
+
+.example-tooltip-black{
+    background: black;
+}
+
+.text-align-left{
+    text-align: left;
+}
+.main-panel{
+    background-color: gold;
+
+}
+
+.custom-panel {
+   
+
+}

@@ -1,0 +1,48 @@
+<mat-toolbar color="" class="hCss">
+    <span>
+      <a mat-button routerLink="/home" routerLinkActive="mat-accent">Student Training Application</a>
+     <!--    <a class="navbar-brand text-danger " href="#">Student Training Application</a> -->
+    </span>
+    <span class="spacer"></span>
+    <ul >
+      <li *ngIf="userIsAuthenticated && userRole== 'Admin'">
+        <a mat-button routerLink="/admin" routerLinkActive="mat-accent">Admin</a>
+      </li>
+
+      <li *ngIf="userIsAuthenticated && userRole== 'Trainer'">
+        <a mat-button routerLink="/trainer" routerLinkActive="mat-accent">Trainer</a>
+      </li>
+
+      <li *ngIf="userIsAuthenticated ">
+        <a mat-button routerLink="/myData" routerLinkActive="mat-accent">Manage My Data</a>
+      </li>
+
+      <li *ngIf="!userIsAuthenticated">
+        <a mat-button routerLink="/login"  routerLinkActive="mat-accent">Login</a>
+      </li>
+      <li *ngIf="!userIsAuthenticated">
+        <a mat-button routerLink="/signUp" routerLinkActive="mat-accent">Signup</a>
+      </li>
+      <li *ngIf="userIsAuthenticated">
+        <a mat-button (click) ="onLogout()">Logout</a>
+      </li>
+    </ul>
+  </mat-toolbar>
+  
+<!-- 
+<nav class="navbar navbar-expand-sm  bg-light  navbar-light">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand text-danger " href="#">Student Training Application</a>
+      </div>
+      
+     
+      <ul class="nav navbar-nav">
+          
+          <li><a routerLink="gmail"  class="navbar-brand" ><span class="fa fa-fw fa-user "></span>Gmail</a></li>
+             <li><a routerLink="signUp"  class="navbar-brand" ><span class="fa fa-fw fa-user "></span> Sign Up</a></li>
+        <li><a routerLink="login"  class="navbar-brand" ><span class="fa fa-fw  fa-unlock-alt"></span> Login</a></li>
+        <li><button> Logout </button> </li>
+      </ul>
+    </div>
+  </nav>-->
